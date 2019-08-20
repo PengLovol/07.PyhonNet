@@ -4,7 +4,7 @@ def handleClient(connfd):
     request = connfd.recv(4096)
     print(request)
     #将request请求按行分割
-    request_lines = request.splitlines()
+    request_lines = request.splitlines()  #将字符串按行分割
     for line in request_lines:
         print(line.decode())
 

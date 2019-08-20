@@ -12,7 +12,7 @@ while True:
     print("Waiting for connect...")
     try:
         c,addr = s.accept()
-    except BlockingIOError:
+    except BlockingIOError:     #BlockingIOError：阻塞异常，当捕捉到这个异常后，继续执行下面的语句，遇到continue回到accept再次进行阻塞判断，重复上述动作！
         sleep(2)
         print(ctime())
         continue 

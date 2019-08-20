@@ -5,7 +5,7 @@ from socket import *
 sockfd = socket(AF_INET,SOCK_STREAM)
 
 #发起连接
-server_addr = ('172.17.0.1',8888)
+server_addr = ('127.0.0.1',8888)
 sockfd.connect(server_addr)
 
 while True:
