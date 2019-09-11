@@ -10,7 +10,7 @@ s.listen(5)
 #创建poll对象
 p = poll()
 
-#fileno ---> IO对象的字典
+#fileno ---> IO对象的字典  ,要时刻维护这个字典．该字典要与我们关注的Io事件保持一致
 fdmap = {s.fileno():s}
 
 #注册关注的IO
